@@ -1,2 +1,3 @@
 # dtg
-pro-bono offering for Decoding The Gurus
+Pro-bono offering for Decoding The Gurus
+https://decoding-the-gurus.captivate.fm/
