@@ -16,14 +16,17 @@ namespace Dtg.Module.BusinessObjects
         public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<ApplicationUserLoginInfo> UserLoginInfos { get; set; }
 
+        //todo add unique name key
         public DbSet<Guru> Gurus { get; set; }
 
-        public DbSet<Rating> Ratings { get; set; }
-
-        public DbSet<Attribute> Attributes { get; set; }
+        //todo users should only be able to edit or delete the records they added
+        public DbSet<RatingHeader> RatingHeaders { get; set; }
+        public DbSet<RatingEntry> RatingEntries { get; set; }
+        public DbSet<Rater> Raters{ get; set; }
+        public DbSet<Metric> Metrics { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            modelBuilder.Entity<Dtg.Module.BusinessObjects.ApplicationUserLoginInfo>(b => {
+            modelBuilder.Entity<ApplicationUserLoginInfo>(b => {
                 b.HasIndex(nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.LoginProviderName), nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.ProviderUserKey)).IsUnique();
             });
         }
