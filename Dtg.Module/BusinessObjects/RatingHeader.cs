@@ -27,7 +27,7 @@ namespace Dtg.Module.BusinessObjects
         [Required] public int RaterId { get; set; }
         [ForeignKey("RaterId")] public virtual Rater Rater { get; set; }
 
-        public string Summary => $"{Rater.Name} {ScoredAt.Date.ToLocalTime()} {Guru.Name}";
+        public string Summary => $"{Rater?.Name} {ScoredAt.Date.ToLocalTime()} {Guru?.Name}";
         public virtual List<RatingEntry> Entries { get; set; }
     }
 }
