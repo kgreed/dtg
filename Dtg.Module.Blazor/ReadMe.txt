@@ -35,3 +35,7 @@ https://www.devexpress.com/kb=T879682
 
 XAF Community Extensions
 https://www.devexpress.com/products/net/application_framework/#extensions
+
+EF Core Tools reference
+https://docs.microsoft.com/en-us/ef/core/cli/powershell
+https://discourse.softwarebydesign.com.au/t/setting-up-migrations-for-blazor/3594

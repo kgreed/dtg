@@ -12,6 +12,7 @@ namespace Dtg.Module.BusinessObjects
         [Key]
         public int Id { get; set; }
         [Required]
+        [Browsable(false)]
         public int RatingHeaderId { get; set; }
         [ForeignKey("RatingHeaderId")]
         public virtual RatingHeader RatingHeader { get; set; }

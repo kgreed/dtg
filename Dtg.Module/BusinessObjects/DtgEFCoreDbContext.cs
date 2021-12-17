@@ -29,6 +29,10 @@ namespace Dtg.Module.BusinessObjects
             modelBuilder.Entity<ApplicationUserLoginInfo>(b => {
                 b.HasIndex(nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.LoginProviderName), nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.ProviderUserKey)).IsUnique();
             });
+            modelBuilder.Entity<Guru>().HasIndex(p => p.Name).IsUnique();
+            modelBuilder.Entity<Metric>().HasIndex(p => p.Name).IsUnique();
+            modelBuilder.Entity<RatingEntry>().HasIndex(p => new { p.RatingHeaderId, p.MetricId }).IsUnique();
+
         }
     }
 }
