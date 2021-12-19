@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Dtg">
-  <BOModel>
-    <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
-  </BOModel>
   <NavigationItems>
     <Items>
       <Item Id="Main">
@@ -18,9 +15,9 @@
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
-  <SchemaModules>
+  <!--<SchemaModules>
     <SchemaModule Name="SystemModule" Version="21.2.4.0" IsNewNode="True" />
-  </SchemaModules>
+  </SchemaModules>-->
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
   </Views>

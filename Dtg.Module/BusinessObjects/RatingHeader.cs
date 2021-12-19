@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DevExpress.ExpressApp.DC;
+using DevExpress.ExpressApp.ReportsV2;
 using DevExpress.Persistent.Base;
 namespace Dtg.Module.BusinessObjects
 {
@@ -28,6 +30,7 @@ namespace Dtg.Module.BusinessObjects
         [ForeignKey("RaterId")] public virtual Rater Rater { get; set; }
 
         public string Summary => $"{Rater?.Name} {ScoredAt.Date.ToLocalTime()} {Guru?.Name}";
+        [Aggregated]
         public virtual List<RatingEntry> Entries { get; set; }
     }
 }

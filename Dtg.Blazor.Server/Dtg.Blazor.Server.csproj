@@ -18,12 +18,11 @@
     <PackageReference Include="DevExpress.ExpressApp.EasyTest.BlazorAdapter" Version="21.2.4" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.0.0" />
-    <PackageReference Include="Azure.Identity" Version="1.4.0" />
     <PackageReference Include="DevExpress.ExpressApp" Version="21.2.4" />
     <PackageReference Include="DevExpress.ExpressApp.Blazor" Version="21.2.4" />
     <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="21.2.4" />
     <PackageReference Include="DevExpress.ExpressApp.EFCore" Version="21.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Blazor" Version="21.2.4" />
     <PackageReference Include="DevExpress.ExpressApp.Validation.Blazor" Version="21.2.4" />
     <PackageReference Include="DevExpress.Persistent.Base" Version="21.2.4" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl.EFCore" Version="21.2.4" />
@@ -34,10 +33,7 @@
     <PackageReference Include="DevExpress.Persistent.Base" Version="21.2.4" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl.EFCore" Version="21.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.5.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>

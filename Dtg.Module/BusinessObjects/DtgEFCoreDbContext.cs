@@ -24,6 +24,7 @@ namespace Dtg.Module.BusinessObjects
         public DbSet<RatingEntry> RatingEntries { get; set; }
         public DbSet<Rater> Raters{ get; set; }
         public DbSet<Metric> Metrics { get; set; }
+        public DbSet<ReportDataV2> ReportDataV2 { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Entity<ApplicationUserLoginInfo>(b => {

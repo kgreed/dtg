@@ -29,10 +29,20 @@
             this.module4 = new Dtg.Module.Blazor.DtgBlazorModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.conditionalAppearanceModule = new DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule();
+            this.reportsModuleV2 = new DevExpress.ExpressApp.ReportsV2.ReportsModuleV2();
+            this.reportsBlazorModuleV2 = new DevExpress.ExpressApp.ReportsV2.Blazor.ReportsBlazorModuleV2();
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
             this.validationBlazorModule = new DevExpress.ExpressApp.Validation.Blazor.ValidationBlazorModule();
 
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+
+            //
+            // reportsModuleV2
+            //
+            this.reportsModuleV2.EnableInplaceReports = true;
+            this.reportsModuleV2.ReportDataType = typeof(DevExpress.Persistent.BaseImpl.EF.ReportDataV2);
+            this.reportsModuleV2.ShowAdditionalNavigation = true;
+            this.reportsModuleV2.ReportStoreMode = DevExpress.ExpressApp.ReportsV2.ReportStoreModes.XML;
 
             //
             // validationModule
@@ -49,6 +59,8 @@
             this.Modules.Add(this.module4);
             this.Modules.Add(this.securityModule1);
             this.Modules.Add(this.conditionalAppearanceModule);
+            this.Modules.Add(this.reportsModuleV2);
+            this.Modules.Add(this.reportsBlazorModuleV2);
             this.Modules.Add(this.validationModule);
             this.Modules.Add(this.validationBlazorModule);
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.DtgBlazorApplication_DatabaseVersionMismatch);
@@ -65,6 +77,8 @@
         private Dtg.Module.Blazor.DtgBlazorModule module4;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
         private DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule conditionalAppearanceModule;
+        private DevExpress.ExpressApp.ReportsV2.ReportsModuleV2 reportsModuleV2;
+        private DevExpress.ExpressApp.ReportsV2.Blazor.ReportsBlazorModuleV2 reportsBlazorModuleV2;
         private DevExpress.ExpressApp.Validation.ValidationModule validationModule;
         private DevExpress.ExpressApp.Validation.Blazor.ValidationBlazorModule validationBlazorModule;
     }

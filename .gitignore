@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs
+/Dtg.Blazor.Server/Properties/PublishProfiles
+/Dtg.Blazor.Server/Properties/ServiceDependencies/dtg - Zip Deploy
+/Dtg.Blazor.Server/Properties/ServiceDependencies/dtg2 - Web Deploy
+/Dtg.Blazor.Server/Properties/ServiceDependencies/DtgBlazorServer20211218134129 - Web Deploy
+/Dtg.Blazor.Server/Properties/serviceDependencies.dtg2 - Web Deploy.json
+/Dtg.Blazor.Server/Properties/serviceDependencies.DtgBlazorServer20211218134129 - Web Deploy.json
+/Dtg.Blazor.Server/Properties/serviceDependencies.json
+/Dtg.Module/connections.json
