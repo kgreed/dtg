@@ -16,7 +16,9 @@ namespace Dtg.Blazor.Server {
             base.OnSetupStarted();
             IConfiguration configuration = ServiceProvider.GetRequiredService<IConfiguration>();
             if(configuration.GetConnectionString("ConnectionString") != null) {
-                ConnectionString = configuration.GetConnectionString("ConnectionString");
+                ConnectionString = HandyFunctions.GetConnectionString();
+                var s = "";
+                // ConnectionString = configuration.GetConnectionString("ConnectionString");
             }
 #if EASYTEST
             if(configuration.GetConnectionString("EasyTestConnectionString") != null) {

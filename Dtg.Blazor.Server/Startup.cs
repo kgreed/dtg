@@ -157,7 +157,8 @@ namespace Dtg.Blazor.Server
                 // Do not use this code in production environment to avoid data loss.
                 // We recommend that you refer to the following help topic before you use an in-memory database: https://docs.microsoft.com/en-us/ef/core/testing/in-memory
                 //options.UseInMemoryDatabase("InMemory");
-                var connectionString = Configuration.GetConnectionString("ConnectionString");
+              // var connectionString = Configuration.GetConnectionString("ConnectionString");
+                var connectionString = HandyFunctions.GetConnectionString();
                 options.UseSqlServer(connectionString);
                 options.UseLazyLoadingProxies();
                 options.UseSecurity(serviceProvider);
