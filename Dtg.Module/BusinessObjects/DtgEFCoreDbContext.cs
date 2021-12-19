@@ -32,6 +32,8 @@ namespace Dtg.Module.BusinessObjects
             });
             modelBuilder.Entity<Guru>().HasIndex(p => p.Name).IsUnique();
             modelBuilder.Entity<Metric>().HasIndex(p => p.Name).IsUnique();
+           // modelBuilder.Entity<RatingEntry>().Property(x => x.Score).HasPrecision(10, 2);
+
             modelBuilder.Entity<RatingEntry>().HasIndex(p => new { p.RatingHeaderId, p.MetricId }).IsUnique();
 
         }

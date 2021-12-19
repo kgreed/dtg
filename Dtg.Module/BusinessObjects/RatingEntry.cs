@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
+ 
 namespace Dtg.Module.BusinessObjects
 {
     [NavigationItem("Main")]
@@ -20,6 +21,7 @@ namespace Dtg.Module.BusinessObjects
         public virtual RatingHeader RatingHeader { get; set; }
         [ModelDefault("DisplayFormat", "{0:g}")]
         [ModelDefault("EditMask", "g")]
+        [DataType("decimal(18,5)")]
         public decimal Score { get; set; }
         [Browsable(false)]
         public int MetricId { get; set; }
