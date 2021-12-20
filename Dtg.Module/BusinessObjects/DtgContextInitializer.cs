@@ -1,6 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-using DevExpress.ExpressApp.EFCore.DesignTime;
-namespace Dtg.Module.BusinessObjects {
-   
-	//This factory creates DbContext for design-time services. For example, it is required for database migration.
+﻿using DevExpress.ExpressApp.EFCore.DesignTime;
+using Microsoft.EntityFrameworkCore;
+namespace Dtg.Module.BusinessObjects
+{
+    public class DtgContextInitializer : DbContextTypesInfoInitializerBase
+    {
+        protected override DbContext CreateDbContext()
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<DtgEFCoreDbContext>()
+                .UseSqlServer(@";");
+            return new DtgEFCoreDbContext(optionsBuilder.Options);
+        }
+    }
 }
