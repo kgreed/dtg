@@ -1,3 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <NavigationItems>
+    <Items>
+      <Item Id="Main" Index="0" />
+      <Item Id="Reports" Index="1" />
+      <Item Id="Default" Index="2" />
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="21.2.4.0" IsNewNode="True" />
+  </SchemaModules>
 </Application>

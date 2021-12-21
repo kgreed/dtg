@@ -30,5 +30,7 @@ namespace Dtg.Module.BusinessObjects
         public string MetricName => Metric?.Name;
         public string RaterName => RatingHeader.Rater.Name;
         public string GuruName => RatingHeader.Guru.Name;
+        //[Browsable(false)] public int GuruId => RatingHeader.GuruId;
+         
     }
 }

@@ -27,8 +27,11 @@ namespace Dtg.Module
         public override void Setup(ApplicationModulesManager moduleManager)
         {
             base.Setup(moduleManager);
+            //var application = moduleManager as XafApplication;
+            
             var reportModule = moduleManager.Modules.FindModule<ReportsModuleV2>();
             reportModule.ReportDataType = typeof(ReportDataV2);
         }
+       
     }
 }
