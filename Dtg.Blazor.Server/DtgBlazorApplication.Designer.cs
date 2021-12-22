@@ -29,6 +29,8 @@
             this.module4 = new Dtg.Module.Blazor.DtgBlazorModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.conditionalAppearanceModule = new DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule();
+            this.officeModule = new DevExpress.ExpressApp.Office.OfficeModule();
+            this.officeBlazorModule = new DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule();
             this.reportsModuleV2 = new DevExpress.ExpressApp.ReportsV2.ReportsModuleV2();
             this.reportsBlazorModuleV2 = new DevExpress.ExpressApp.ReportsV2.Blazor.ReportsBlazorModuleV2();
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
@@ -59,6 +61,8 @@
             this.Modules.Add(this.module4);
             this.Modules.Add(this.securityModule1);
             this.Modules.Add(this.conditionalAppearanceModule);
+            this.Modules.Add(this.officeModule);
+            this.Modules.Add(this.officeBlazorModule);
             this.Modules.Add(this.reportsModuleV2);
             this.Modules.Add(this.reportsBlazorModuleV2);
             this.Modules.Add(this.validationModule);
@@ -81,5 +85,7 @@
         private DevExpress.ExpressApp.ReportsV2.Blazor.ReportsBlazorModuleV2 reportsBlazorModuleV2;
         private DevExpress.ExpressApp.Validation.ValidationModule validationModule;
         private DevExpress.ExpressApp.Validation.Blazor.ValidationBlazorModule validationBlazorModule;
+        private DevExpress.ExpressApp.Office.OfficeModule officeModule;
+        private DevExpress.ExpressApp.Office.Blazor.OfficeBlazorModule officeBlazorModule;
     }
 }

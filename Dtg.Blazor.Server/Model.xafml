@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <BOModel>
+    <Class Name="Dtg.Module.BusinessObjects.Guru">
+      <OwnMembers>
+        <Member Name="Memo" PropertyEditorType="DevExpress.ExpressApp.Office.Blazor.Editors.RichTextPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
   <NavigationItems>
     <Items>
       <Item Id="Main" Index="0" />

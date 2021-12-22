@@ -7,6 +7,7 @@ using Dtg.Module.BusinessObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+ 
 namespace Dtg.Blazor.Server {
     public partial class DtgBlazorApplication : BlazorApplication {
         public DtgBlazorApplication() {
@@ -17,7 +18,7 @@ namespace Dtg.Blazor.Server {
             IConfiguration configuration = ServiceProvider.GetRequiredService<IConfiguration>();
             if(configuration.GetConnectionString("ConnectionString") != null) {
                 ConnectionString = HandyFunctions.GetConnectionString();
-                var s = "";
+               
                 // ConnectionString = configuration.GetConnectionString("ConnectionString");
             }
 #if EASYTEST
@@ -32,8 +33,8 @@ namespace Dtg.Blazor.Server {
 #endif
         }
         protected override void CreateDefaultObjectSpaceProvider(CreateCustomObjectSpaceProviderEventArgs args) {
-            IDbContextFactory<DtgEFCoreDbContext> dbFactory = ServiceProvider.GetService<IDbContextFactory<DtgEFCoreDbContext>>();
-            SecuredEFCoreObjectSpaceProvider efCoreObjectSpaceProvider = new SecuredEFCoreObjectSpaceProvider((ISelectDataSecurityProvider)Security, dbFactory, TypesInfo);
+            var dbFactory = ServiceProvider.GetService<IDbContextFactory<DtgEFCoreDbContext>>();
+            SecuredEFCoreObjectSpaceProvider efCoreObjectSpaceProvider = new((ISelectDataSecurityProvider)Security, dbFactory, TypesInfo);
             args.ObjectSpaceProviders.Add(efCoreObjectSpaceProvider);
             args.ObjectSpaceProviders.Add(new NonPersistentObjectSpaceProvider(TypesInfo, null));
         }
