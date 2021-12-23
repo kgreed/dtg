@@ -9,8 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
  
 namespace Dtg.Blazor.Server {
-    public partial class DtgBlazorApplication : BlazorApplication {
-        public DtgBlazorApplication() {
+    public partial class BlazorApplication : DevExpress.ExpressApp.Blazor.BlazorApplication {
+        public BlazorApplication() {
             InitializeComponent();
         }
         protected override void OnSetupStarted() {

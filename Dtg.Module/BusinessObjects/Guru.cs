@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Editors;
-using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
-using DevExpress.Xpo;
 namespace Dtg.Module.BusinessObjects
 {
     [NavigationItem("Main")]
@@ -17,11 +17,11 @@ namespace Dtg.Module.BusinessObjects
             Ratings = new List<RatingHeader>();
         }
 
-        [System.ComponentModel.DataAnnotations.Key] [Browsable(false)] public int Id { get; set; }
+        [Key] [Browsable(false)] public int Id { get; set; }
         public string Name { get; set; }
         [NotMapped] public int NumRatings => Ratings.Count;
         [NotMapped]
-        [DevExpress.ExpressApp.DC.Aggregated]
+        [Aggregated]
         public virtual List<MetricAggregate> Metrics
         {
             get
@@ -36,15 +36,8 @@ namespace Dtg.Module.BusinessObjects
                     { Metric = e.Metric, Average = e.Average, Guru = this }).ToList();
             }
         }
-        [DevExpress.ExpressApp.DC.Aggregated] public virtual List<RatingHeader> Ratings { get; set; }
-
-        //[ModelDefault("RowCount", "5")]
-        //[ToolTip("Select link and right click to navigate to it.")]
-        //[Size(SizeAttribute.Unlimited)]
-        //[EditorAlias(EditorAliases.RichTextPropertyEditor)]
-      //  [EditorAlias(EditorAliases.HtmlPropertyEditor)]
+        [Aggregated] public virtual List<RatingHeader> Ratings { get; set; }
+        [EditorAlias(EditorAliases.RichTextPropertyEditor)]
         public string Info { get; set; }
-        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
-        public byte[]? Memo { get; set; }
     }
 }

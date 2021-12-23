@@ -1,5 +1,5 @@
 ﻿namespace Dtg.Blazor.Server {
-    partial class DtgBlazorApplication {
+    partial class BlazorApplication {
         /// <summary> 
         /// Required designer variable.
         /// </summary>

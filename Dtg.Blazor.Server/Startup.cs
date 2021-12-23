@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using DevExpress.Blazor.Reporting;
 using DevExpress.ExpressApp.Blazor.Services;
+using DevExpress.ExpressApp.Office.Blazor;
 using DevExpress.ExpressApp.ReportsV2.Blazor;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.WebApi.Services;
@@ -41,8 +42,9 @@ namespace Dtg.Blazor.Server
             services.AddServerSideBlazor();
             services.AddHttpContextAccessor();
             services.AddScoped<CircuitHandler, CircuitHandlerProxy>();
-            services.AddXaf<DtgBlazorApplication>(Configuration);
+            services.AddXaf<BlazorApplication>(Configuration);
             services.AddXafReporting();
+            services.AddXafOffice();
             services.AddXafSecurity(options =>
                 {
                     options.RoleType = typeof(PermissionPolicyRole);
