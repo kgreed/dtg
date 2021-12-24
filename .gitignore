@@ -13,3 +13,4 @@
 /Dtg.Module/connections.json
 /Dtg.Blazor.Server/.config
 /Dtg.Blazor.Server/Properties/ServiceDependencies/dtglinux - Zip Deploy
+/Dtg.Blazor.Server/Properties/ServiceDependencies/dtg3 - Web Deploy/profile.arm.json

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Editors;
+using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
 namespace Dtg.Module.BusinessObjects
 {
@@ -37,7 +38,9 @@ namespace Dtg.Module.BusinessObjects
             }
         }
         [Aggregated] public virtual List<RatingHeader> Ratings { get; set; }
-        [EditorAlias(EditorAliases.RichTextPropertyEditor)]
+        //[EditorAlias(EditorAliases.HtmlPropertyEditor)]
+        [VisibleInListView(false)]
+        [ModelDefault("RowCount", "4")]
         public string Info { get; set; }
     }
 }
